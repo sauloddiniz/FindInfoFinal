@@ -1,0 +1,1078 @@
+<html>
+<head>
+<!-- Required meta tags-->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- Color theme for statusbar -->
+<meta name="theme-color" content="#2196f3">
+<title>My App</title>
+
+<link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+<link rel="stylesheet" href="dist/css/framework7.material.min.css">
+<link rel="stylesheet"
+	href="dist/css/framework7.material.colors.min.css">
+<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<!-- Views -->
+	<div class="views">
+		<!-- View -->
+		<div class="view view-main">
+			<!-- Pages -->
+			<div class="pages">
+
+				<!------------------------------------------ INDEX PAGE --------------------------------------------------------->
+				<div class="page" data-page="index">
+					<div data-page="login-screen"
+						class="page no-navbar no-toolbar no-swipeback">
+						<div class="page-content login-screen-content">
+							<div class="navbar">
+								<div class="navbar-inner">
+									<div class="login-screen-title">Find Info</div>
+								</div>
+							</div>
+							<form>
+								<div class="list-block">
+									<ul>
+										<li class="item-content">
+											<div class="item-inner">
+												<div class="item-title label">Email</div>
+												<div class="item-input">
+													<input id="email" type="email" name="nameUser"
+														placeholder="e-mail" />
+												</div>
+											</div>
+										</li>
+										<li class="item-content">
+											<div class="item-inner">
+												<div class="item-title label">Senha</div>
+												<div class="item-input">
+													<input id="senha" type="password" name="password"
+														placeholder="senha" />
+												</div>
+											</div>
+										</li>
+										<li><a href="#" class="item-link list-button">Esqueceu
+												a senha ?</a></li>
+									</ul>
+								</div>
+								<div id="list-buttons" class="list-block">
+									<ul>
+										<li><a id="login" href="#"
+											class="button button-fill button-raised"
+											onclick="validarLogin();">Logar</a></li>
+										<br />
+										<li><a id="cadastrar" href="#"
+											class="button button-fill button-raised"
+											onclick="telaCadastro();">Criar conta</a></li>
+										<li>
+											<p class="buttons-row">
+												<a href="#" class="button"> <img class="imagens" alt=""
+													src="img/face.png">
+												</a> <a href="#" class="button"> <img class="imagens" alt=""
+													src="img/twitter.png">
+												</a>
+											</p>
+										</li>
+									</ul>
+									<div class="list-block-label">
+										<p>all right reserved by ZYON</p>
+									</div>
+									
+									
+								
+									<div>
+										<input type="file" name="img_file"> <input
+											type="button" onclick="upload()" value="enviar">
+									</div>
+									
+									
+									
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<!------------------------------------------ FIM INDEX PAGE --------------------------------------------------------->
+
+
+				<!------------------------------------------ CADASTRO PAGE --------------------------------------------------------->
+				<div class="page cached" data-page="cadastro">
+					<div class="navbar">
+						<div class="navbar-inner">
+							<div class="left">
+								<a href="#index" class="link icon-only"> <i
+									class="icon icon-back"></i>
+								</a>
+							</div>
+							<div class="center"></div>
+							<div class="right">
+								<a href="#" class="link icon-only"> <i
+									class="icon icon-bars"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="page-content" style="margin-top: 20px; top: 20px;">
+						<div class="content-block-title">Formulario de cadastro</div>
+						<div class="list-block">
+							<ul>
+								<!-- Text inputs -->
+								<li>
+									<div class="item-content">
+										<div class="item-media">
+											<i class="icon icon-form-name"></i>
+										</div>
+										<div class="item-inner">
+											<div class="item-input">
+												<input id="nome" type="text" placeholder="nome">
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="item-content">
+										<div class="item-media">
+											<i class="icon icon-form-email"></i>
+										</div>
+										<div class="item-inner">
+											<div class="item-input">
+												<input id="emailCadastro" type="email" placeholder="E-mail">
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="item-content">
+										<div class="item-media">
+											<i class="icon icon-form-password"></i>
+										</div>
+										<div class="item-inner">
+											<div class="item-input">
+												<input id="senhaCadastro" type="password" name="password"
+													placeholder="Senha" />
+											</div>
+										</div>
+									</div>
+								</li>
+								<!-- Select -->
+								<li>
+									<div class="item-content">
+										<div class="item-media">
+											<i class="icon icon-form-gender"></i>
+										</div>
+										<div class="item-inner">
+											<div class="item-input">
+												<select id="sexo">
+													<option>Masculino</option>
+													<option>Feminino</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</li>
+								<!-- Date -->
+								<li>
+									<div class="item-content">
+										<div class="item-media">
+											<i class="icon icon-form-calendar"></i>
+										</div>
+										<div class="item-inner">
+											<div class="item-input">
+												<input id="dataNascimento" type="date"
+													placeholder="data de nascimento" value="30/04/2013">
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="toolbar">
+						<div class="toolbar-inner">
+							<a href="#" onclick="getText()" class="link"></a> <a href="#"
+								onclick="getText()" class="link center">Efetuar cadastro</a> <a
+								href="#" onclick="getText()" class="link "></a>
+						</div>
+					</div>
+				</div>
+				<!------------------------------------------ FIM CADASTRO PAGE --------------------------------------------------------->
+
+				<!------------------------------------------ PRODUTO PAGE -------------------------------------------------------------->
+				<div class="page cached" data-page="autocomplete">
+					<div class="navbar">
+						<div class="navbar-inner">
+							<div class="left">
+								<a href="#index" class="link icon-only"> <i
+									class="icon icon-back"></i>
+								</a>
+							</div>
+							<div class="center">Tipo do produto</div>
+							<div class="right">
+								<a href="#" class="link icon-only"> <i
+									class="icon icon-bars"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="page-content" style="margin-top: 12px; top: 12px">
+						<div class="list-block">
+							<ul>
+								<li class="item-content">
+									<div class="item-inner">
+										<div class="item-title floating-label">Nome do produto</div>
+										<div class="item-input">
+											<input type="text" id="autocomplete-dropdown" />
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<p>
+							<a href="#" onclick="buscarProduto()"
+								class="button button-raised color-cyan"
+								style="margin-left: 15px; margin-right: 15px;"><i
+								class="material-icons md-36">search</i></a>
+						</p>
+						<div class="content-block-title" style="font-size: 18px;">Hardwares</div>
+						<div data-pagination=".swiper-pagination-c2"
+							data-space-between="20" data-centered-slides="true"
+							data-initial-slide="1" data-slides-per-view="2"
+							data-next-button=".swiper-button-next"
+							data-prev-button=".swiper-button-prev"
+							data-pagination-clickable="true"
+							class="swiper-container2 swiper-init ks-carousel-slider"
+							style="margin-top: -5px; top: -5px;">
+							<div class="swiper-pagination swiper-pagination-c2"></div>
+							<div id="imgHard" class="swiper-wrapper">
+								<div id="Placa mae" class="swiper-slide imgProd">
+									<img src="img/produtos/mae.png">
+									<h4>Placa mãe</h4>
+								</div>
+								<div id="Placa de video" class="swiper-slide imgProd">
+									<img src="img/produtos/PLvideo.png">
+									<h4>Placa de video</h4>
+								</div>
+								<div id="Memoria ram" class="swiper-slide imgProd">
+									<img src="img/produtos/memoria_ram.png">
+									<h4>Memoria ram</h4>
+								</div>
+								<div id="Fonte" class="swiper-slide imgProd">
+									<img src="img/produtos/fonteATX.jpg">
+									<h4>Fontes ATX</h4>
+								</div>
+								<div id="HD" class="swiper-slide imgProd">
+									<img src="img/produtos/hd_interno.png">
+									<h4>HD</h4>
+								</div>
+							</div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+						<div class="content-block-title" style="font-size: 18px;">Periféricos
+							e acessórios</div>
+						<div data-pagination=".swiper-pagination-c2"
+							data-space-between="20" data-centered-slides="true"
+							data-initial-slide="1" data-slides-per-view="2"
+							data-next-button=".swiper-button-next"
+							data-prev-button=".swiper-button-prev"
+							data-pagination-clickable="true"
+							class="swiper-container2 swiper-init ks-carousel-slider"
+							style="margin-top: -5px; top: -5px;">
+							<div class="swiper-pagination swiper-pagination-c2"></div>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide imgProd">
+									<img src="img/produtos/Headset.png">
+									<h4>Headset</h4>
+								</div>
+								<div class="swiper-slide imgProd">
+									<img src="img/produtos/Micro.png">
+									<h4>Cartão SD</h4>
+								</div>
+								<div class="swiper-slide imgProd">
+									<img src="img/produtos/Mouse.png">
+									<h4>Mouse</h4>
+								</div>
+								<div class="swiper-slide imgProd">
+									<img src="img/produtos/PenDriver.png">
+									<h4>Pendriver</h4>
+								</div>
+								<div class="swiper-slide imgProd">
+									<img src="img/produtos/Teclado.png">
+									<h4>Teclado</h4>
+								</div>
+							</div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+					</div>
+				</div>
+				<!------------------------------------------ FIM PRODUTO PAGE --------------------------------------------------------->
+
+				<!------------------------------------------ LIST PAGE -------------------------------------------------------------->
+				<div class="page cached" data-page="list">
+
+					<!----------------------------------------- PANELS -------------------------------------------------------->
+
+					<!-- Right Panel with Cover effect -->
+					<div class="panel panel-right panel-cover">
+						<div class="page toolbar-fixed navbar-fixed" data-page="pane">
+
+							<div class="navbar">
+								<!-- Inicio NAVBAR -->
+								<div class="navbar">
+									<div class="navbar-inner">
+										<div class="right">
+											<a href="" class="close-panel"><i class="icon icon-close">close</i></a>
+										</div>
+										<div class="center">Filtro</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="page-content" style="margin-top: -15px; top: -15px;">
+								<div id="acordianList" class="list-block accordion-list"
+									style="margin-top: -10px; top: -10px;">
+
+ <form style="background-color: white;" class="searchbar">
+        <div class="searchbar-input">
+            <input id="autocomplete-dropdown2" type="search" placeholder="Pelo nome">
+            <a href="#" class="searchbar-clear"></a>
+        </div>
+        <a href="#" class="searchbar-cancel">Cancel</a>
+    </form>
+
+									<ul id="acordPlMae">
+										<li class="accordion-item"><a href="#"
+											class="item-link item-content">
+												<div class="item-inner">
+													<div class="item-title">Marca</div>
+												</div>
+										</a>
+											<div class="accordion-item-content" style="">
+												<div class="list-block">
+													<ul>
+														<!-- Single radio input -->
+														<li style="display:none;"><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="marcaMae-radio" value="unknown" checked="checked">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title"></div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="marcaMae-radio" value="assus" >
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">Assus</div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="marcaMae-radio" value="asrock">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">AsRock</div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="marcaMae-radio" value="gigabyte">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">Gigabyte</div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="marcaMae-radio" value="amd">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">Amd</div>
+																</div>
+														</label></li>
+													</ul>
+												</div>
+											</div></li>
+
+										<li class="accordion-item"><a href="#"
+											class="item-link item-content">
+												<div class="item-inner">
+													<div class="item-title">Soquete</div>
+												</div>
+										</a>
+											<div class="accordion-item-content" style="">
+												<div class="list-block">
+													<ul>
+														<!-- Single radio input -->
+														<li style="display:none;"><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="soqueteMae-radio" value="unknown" checked="checked">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title"></div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="soqueteMae-radio" value="LGA1155">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">LGA1155</div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="soqueteMae-radio" value="LGA775">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">LGA775</div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="soqueteMae-radio" value="AM3">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">AM3</div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="soqueteMae-radio" value="am2+">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">AM2+</div>
+																</div>
+														</label></li>
+													</ul>
+												</div>
+											</div></li>
+										<li class="accordion-item"><a href="#"
+											class="item-link item-content">
+												<div class="item-inner">
+													<div class="item-title">Tipo de memoria</div>
+												</div>
+										</a>
+											<div class="accordion-item-content" style="">
+												<div class="list-block">
+													<ul>
+														<!-- Single radio input -->
+														<li style="display: none;"><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="tMemoriaMae-radio" value="unknown" checked="checked">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title"></div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="tMemoriaMae-radio" value="DDR3" >
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">DDR3</div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="tMemoriaMae-radio" value="DDR2">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">DDR2</div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="tMemoriaMae-radio" value="DDR">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">DDR</div>
+																</div>
+														</label></li>
+													</ul>
+												</div>
+											</div></li>
+										<li class="accordion-item"><a href="#"
+											class="item-link item-content">
+												<div class="item-inner">
+													<div class="item-title">Processadores compativeis</div>
+												</div>
+										</a>
+											<div class="accordion-item-content" style="">
+												<div class="list-block">
+													<ul>
+														<!-- Single radio input -->
+														<li style="display: none;"><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="cProcessadoresMae-radio" value="unknown" checked="checked">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title"></div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="cProcessadoresMae-radio" value="I3">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">I3</div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="cProcessadoresMae-radio" value="I5">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">I5</div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="cProcessadoresMae-radio" value="I7">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">I7</div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="cProcessadoresMae-radio" value="AMDFX">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">AMD FX</div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="cProcessadoresMae-radio" value="AMDAthlon">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">AMD Athlon</div>
+																</div>
+														</label></li>
+													</ul>
+												</div>
+											</div></li>
+
+									</ul>
+
+									<ul id="acordPlVideo">
+										<li class="accordion-item"><a href="#"
+											class="item-link item-content">
+												<div class="item-inner">
+													<div class="item-title">Marca</div>
+												</div>
+										</a>
+											<div class="accordion-item-content" style="">
+												<div class="list-block">
+													<ul>
+														<!-- Single radio input -->
+														<li style="display: none"><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="marcaVideo-radio" value="unknown" checked="checked">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title"></div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="marcaVideo-radio" value="assus">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">Assus</div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content ">
+																<!-- Checked by default --> <input type="radio"
+																name="marcaVideo-radio" value="intel">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">intel</div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content ">
+																<!-- Checked by default --> <input type="radio"
+																name="marcaVideo-radio" value="gigabyte">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">Gigabyte</div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content ">
+																<!-- Checked by default --> <input type="radio"
+																name="marcaVideo-radio" value="amd">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">Amd</div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content ">
+																<!-- Checked by default --> <input type="radio"
+																name="marcaVideo-radio" value="XFX">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">XFX</div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="marcaVideo-radio" value="zotac">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">Zotac</div>
+																</div>
+														</label></li>
+													</ul>
+												</div>
+											</div></li>
+										<li class="accordion-item"><a href="#"
+											class="item-link item-content">
+												<div class="item-inner">
+													<div class="item-title">Memoria</div>
+												</div>
+										</a>
+											<div class="accordion-item-content" style="">
+												<div class="list-block">
+													<ul>
+														<!-- Single radio input -->
+														<li style="display: none"><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="memoriaVideo-radio" value="unknown" checked="checked">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title"></div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="memoriaVideo-radio" value="1024">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">1024 Mb</div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="memoriaVideo-radio" value="2048">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">2048 Mb</div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="memoriaVideo-radio" value="512">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">512 Mb</div>
+																</div>
+														</label></li>
+													</ul>
+												</div>
+											</div></li>
+										<li class="accordion-item"><a href="#"
+											class="item-link item-content">
+												<div class="item-inner">
+													<div class="item-title">Tipo de memoria</div>
+												</div>
+										</a>
+											<div class="accordion-item-content" style="">
+												<div class="list-block">
+													<ul>
+														<!-- Single radio input -->
+														<li style="display: none"><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="tMemoriaVideo-radio" value="unknown" checked="checked">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title"></div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="tMemoriaVideo-radio" value="GDDR5">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">GDDR5</div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="tMemoriaVideo-radio" value="GDDR3">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">GDDR3</div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="tMemoriaVideo-radio" value="GDDR2">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">GDDR2</div>
+																</div>
+														</label></li>
+													</ul>
+												</div>
+											</div></li>
+										<li class="accordion-item"><a href="#"
+											class="item-link item-content">
+												<div class="item-inner">
+													<div class="item-title">Bits</div>
+												</div>
+										</a>
+											<div class="accordion-item-content" style="">
+												<div class="list-block">
+													<ul>
+														<!-- Single radio input -->
+														<li style="display: none"><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="bitsVideo-radio" value="unknown" checked="checked">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title"></div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="bitsVideo-radio" value="64">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">64 Mb</div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="bitsVideo-radio" value="128">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">128 Mb</div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="bitsVideo-radio" value="192">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">192 Mb</div>
+																</div>
+														</label></li>
+														<li><label class="label-radio item-content">
+																<!-- Checked by default --> <input type="radio"
+																name="bitsVideo-radio" value="256">
+																<div class="item-media">
+																	<i class="icon icon-form-radio"></i>
+																</div>
+																<div class="item-inner">
+																	<div class="item-title">256 Mb</div>
+																</div>
+														</label></li>
+													</ul>
+												</div>
+											</div></li>
+
+									</ul>
+
+								</div>
+							</div>
+
+							<div class="toolbar toolbar-bottom">
+								<div class="toolbar-inner">
+									<a href="#" class="link">Link 1</a> <a href="#"
+										onclick="test()" class="link">Filter</a>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<!----------------------------------------- FIM PANELS -------------------------------------------------------->
+
+					<div class="navbar">
+						<div class="navbar-inner">
+							<div class="left">
+								<a id="backList" href="#autocomplete" class="link icon-only">
+									<i class="icon icon-back"></i>
+								</a>
+							</div>
+							<div id="getNomeItem" class="center"></div>
+							<div class="right">
+								<a onclick="openDisplay()" data-panel="right" href="#"
+									class="link icon-only open-panel">
+									<i class="material-icons md-36">&#xE152;</i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="page-content" style="margin-top: 12px; top: 12px;">
+
+						<div class="list-block media-list">
+							<ul id="ulItem">
+								<li id="0" style="display: none"><a href="#detais"
+									class="item-link item-content">
+										<div class="item-media">
+											<img src="" width="80">
+										</div>
+										<div class="item-inner">
+											<div class="item-title-row">
+												<div class="item-title"></div>
+												<div class="item-after"></div>
+											</div>
+											<div class="item-subtitle"></div>
+											<div class="item-text"></div>
+										</div>
+								</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!------------------------------------------ FIM LIST PAGE -------------------------------------------------------------->
+
+				<!------------------------------------------ DATALHE PAGE -------------------------------------------------------------->
+				<div class="page cached" data-page="detais">
+
+					<!-- Right Panel with Cover effect -->
+					<div class="panel panel-right panel-cover">
+						<div class="page toolbar-fixed navbar-fixed" data-page="pane">
+
+							<div class="navbar">
+								<!-- Inicio NAVBAR -->
+								<div class="navbar">
+									<div class="navbar-inner">
+										<div class="right">
+											<a href="" class="close-panel"><i class="icon icon-close">close</i></a>
+										</div>
+										<div class="center">Lista de lojas</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="page-content" style="margin-top: -25px; top: -25px;">
+
+								<div class="list-block">
+									<ul id="ulLoja">
+										<li id="0" style="display: none"><a href="#" class="item-link item-content">
+												<div class="item-inner">
+													<div class="item-title"></div>
+													<div class="item-after"></div>
+												</div>
+										</a></li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="navbar">
+						<div class="navbar-inner">
+							<div class="left">
+								<a href="#list" class="link close-picker"> <i
+									class="icon icon-back"></i>
+								</a>
+							</div>
+							<div class="center"></div>
+							<div class="right">
+								<a href="#" data-panel="right" class="link icon-only open-panel"> 
+								<i class="material-icons">&#xE896;</i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="page-content" style="margin-top: 15px; top: 15px;">
+						<div class="content-block-title" id="prod-titulo"></div>
+						<div class="card demo-card-header-pic">
+							<div id="prod-img" style="background-image: url()"
+								class="card-header no-border"></div>
+							<div class="card-content">
+								<div class="card-content-inner">
+									<p class="color-gray" id="prod-sub"></p>
+									<p id="prod-desc"></p>
+								</div>
+							</div>
+							<div class="card-footer">
+								<a href="#" id="prod-fotos" style="margin-left: -5;padding-left: 40px;" class="link">
+									<i class="material-icons md-36" style="position: absolute; margin-left: -40px;">&#xE413;
+									</i>fotos
+								</a>								
+								<a href="#" id="rastrear" style="margin-left: -5;padding-left: 40px;" class="link">
+									<i class="material-icons md-36" style="position: absolute; margin-left: -35px;">&#xE0C8;
+									</i>Rastrear
+								</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!------------------------------------------ FIM DETALHE PAGE -------------------------------------------------------------->
+
+
+				<!------------------------------------------ MAP PAGE -------------------------------------------------------------->
+				<div class="page cached" data-page="map">
+					<div class="navbar">
+						<div class="navbar-inner">
+							<div class="left">
+								<a href="#list" class="link icon-only"> <i
+									class="icon icon-back"></i>
+								</a>
+							</div>
+							<div class="center"></div>
+							<div class="right">
+								<a href="#" class="link icon-only"> <i
+									class="icon icon-bars"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="page-content">
+						<div id="map"></div>
+					</div>
+				</div>
+				<!------------------------------------------ FIM MAP PAGE -------------------------------------------------------------->
+
+				<!------------------------------------------ PHOTO PAGE -------------------------------------------------------------->
+				<div class="page cached" data-page="photo">
+
+					<div class="page-content"></div>
+				</div>
+				<!------------------------------------------ FIM MAP PAGE -------------------------------------------------------------->
+
+				<!-- FIM DE PAGES -->
+			</div>
+
+			<!-- FIM DE view view-main -->
+		</div>
+
+		<!-- FIM DE VIEWS -->
+	</div>
+	<script type="text/javascript" src="dist/js/framework7.min.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/jquery-2.2.2.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/global.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+	<script type="text/javascript" src="js/tela2.js"></script>
+	<script type="text/javascript" src="js/cadastro.js"></script>
+	<script type="text/javascript" src="js/itemList.js"></script>
+	<script type="text/javascript" src="js/utils.js"></script>
+	<script type="text/javascript" src="js/infobox.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABbGhD5o6J74qagRtSxxZ0zFwdVUXFo1g"> </script>
+	<script type="text/javascript">
+
+
+		function upload(){
+			var file = $('input[name="img_file"]').get(0).files[0];
+			var formData = new FormData();
+			formData.append('file', file);
+
+			alert(file.type)
+			$.ajax({
+				url: URL + '/avatar', //avatar //img
+				type:'POST',
+				data:formData,
+				cache: false,
+				contentType: false,
+				processData: false,
+				success: function(){
+					alert("Funfou");
+					},
+				error: function(){
+					alert("não funfou");
+					}						
+				})
+			};
+ 
+      </script>
+</body>
+</html>

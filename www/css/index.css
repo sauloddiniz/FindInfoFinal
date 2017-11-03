@@ -1,0 +1,90 @@
+.photo-browser-swiper-container swiper-container swiper-container-horizontal
+	{
+	padding: 100;
+	margin-top: 50%;
+}
+
+#map {
+	width: 100%;
+	height: 100%;
+}
+
+
+.imagens {
+	width: 70px;
+}
+
+.buttons-row a {
+	height: 80px;
+}
+
+.demo-card-header-pic .card-header {
+	height: 60vw;
+	background-size: cover;
+	background-position: center;
+}
+
+.imgProd h4 {
+	margin-top: -1pt;
+	top: -1px;
+	position: absolute;
+}
+
+.imgProd img {
+	top: 0px;
+	border-top: 0px;
+	padding-top: 0px;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	background: #fff;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+}
+
+.swiper-slide span {
+	text-align: center;
+	display: block;
+	margin: 20px;
+	font-size: 21px;
+}
+
+.swiper-container2 {
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	height: 120px;
+	margin: 35px 0;
+	z-index: 1;
+}
+
+.item-text2 {
+	font-size: 14px;
+	color: #757575;
+	line-height: 20px;
+	position: relative;
+	overflow: hidden;
+	max-height: 40px;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	display: -webkit-box
+}
+
+.item-media2 img {
+    width: auto;
+    height: auto;
+    max-width: 40px;
+    border-radius: 50%;
+}
+
+<style>
+/* Rules for icon sizes: */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; } /* Default */
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+</style>
